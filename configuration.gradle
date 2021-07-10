@@ -1,0 +1,16 @@
+ext {
+
+    appBuild = [
+            minSdk                   : 23,
+            compileSdk               : 29,
+            targetSdk                : 29,
+            buildToolsVersion        : "29.0.2",
+            testInstrumentationRunner: "androidx.test.runner.AndroidJUnitRunner"
+    ]
+
+    appConfig = [
+            versionCode: 1,
+            versionName: "1.0"
+    ]
+
+}

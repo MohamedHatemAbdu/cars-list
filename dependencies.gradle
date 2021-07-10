@@ -1,0 +1,82 @@
+apply from: 'versions.gradle'
+
+ext {
+
+
+    projectDependencies = [
+            gradle              : "com.android.tools.build:gradle:$build.gradle",
+            kotlin_gradle_plugin: "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin.kotlin",
+            navigation_safe_args: "androidx.navigation:navigation-safe-args-gradle-plugin:$jetpack.navigationController"
+    ]
+
+    commmonDependencies = [
+            retrofit                  : "com.squareup.retrofit2:retrofit:$libraries.retrofit2",
+            jetbrainsKotlin           : "org.jetbrains.kotlin:kotlin-stdlib:$kotlin.kotlin",
+            jetbrainsKotlinReflections: "org.jetbrains.kotlin:kotlin-reflect:$kotlin.kotlin",
+            rxAndroid                 : "io.reactivex.rxjava3:rxandroid:$libraries.rxAndroid",
+            rxJava                    : "io.reactivex.rxjava3:rxjava:$libraries.rxJava",
+            moshi                     : "com.squareup.moshi:moshi-kotlin:$libraries.moshi",
+            moshiAdapters             : "com.squareup.moshi:moshi-adapters:$libraries.moshi",
+            junit                     : "junit:junit:$test.junit",
+            mockitoKotlin             : "org.mockito.kotlin:mockito-kotlin:$libraries.mockitoKotlin",
+            mockitoKotlinInline       : "org.mockito:mockito-inline:$test.mockitoInline",
+            archTestCore              : "androidx.arch.core:core-testing:$test.archTestCore"
+
+
+    ]
+
+    commmonTestDependencies = [
+            junit                     : "junit:junit:$test.junit",
+            mockitoKotlin             : "org.mockito.kotlin:mockito-kotlin:$test.mockitoKotlin",
+            mockitoKotlinInline       : "org.mockito:mockito-inline:$test.mockitoInline",
+            archTestCore              : "androidx.arch.core:core-testing:$test.archTestCore"
+    ]
+
+    // Domain
+    domainDependencies = [
+
+    ]
+    domainTestDependencies = [
+
+
+    ]
+    // Data
+    dataDependencies = [
+            retrofitRxJava2Adapter: "com.squareup.retrofit2:adapter-rxjava3:$libraries.retrofit2",
+            retrofitMoshiConverter: "com.squareup.retrofit2:converter-moshi:$libraries.retrofit2",
+            okhttpLogging         : "com.squareup.okhttp3:logging-interceptor:$libraries.okhttpLogging",
+
+    ]
+    dataTestDependencies = [
+
+
+    ]
+    // Presentation
+    presentationDependencies = [
+
+            constraintLayout           : "androidx.constraintlayout:constraintlayout:$androidX.constraintLayout",
+            androidx_swiperefreshlayout: "androidx.swiperefreshlayout:swiperefreshlayout:$androidX.swiperefreshlayout",
+
+            appCompat                  : "androidx.appcompat:appcompat:$androidX.appcompat",
+            material                   : "com.google.android.material:material:$google.material",
+            lifeCycleExtensions        : "androidx.lifecycle:lifecycle-extensions:$androidX.lifeCycleExtensions",
+            recyclerviewAnimators      : "jp.wasabeef:recyclerview-animators:$libraries.recyclerviewAnimators",
+
+            navigationFragmentKtx      : "androidx.navigation:navigation-fragment-ktx:$jetpack.navigationController",
+            navigationUIKtx            : "androidx.navigation:navigation-ui-ktx:$jetpack.navigationController",
+            daggerCompiler             : "com.google.dagger:dagger-compiler:$libraries.dagger",
+            daggerAndroidProcessor     : "com.google.dagger:dagger-android-processor:$libraries.dagger",
+            daggerAndroidSupport       : "com.google.dagger:dagger-android-support:$libraries.dagger",
+            dagger                     : "com.google.dagger:dagger:$libraries.dagger",
+            daggerAndroid              : "com.google.dagger:dagger-android:$libraries.dagger",
+
+            glide                      : "com.github.bumptech.glide:glide:$libraries.glide",
+            googleServiceMaps          : "com.google.android.gms:play-services-maps:$googleServices.googleServiceMaps",
+
+
+    ]
+    presentationTestDependencies = [
+
+
+    ]
+}

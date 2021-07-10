@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/tango_color</color>
+    <color name="colorPrimaryDark">@color/tango_color</color>
+    <color name="colorAccent">@color/tango_color</color>
+    <color name="color_grey_50">#FAFAFA</color>
+    <color name="color_window_background">@color/color_grey_50</color>
+
+
+    <!-- car_item colors -->
+    <color name="aqua_haze_color">#FAFCFC</color>
+    <color name="tango_color">#F4811E</color>
+    <color name="gray_solid">#808080</color>
+
+</resources>

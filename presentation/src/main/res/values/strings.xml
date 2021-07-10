@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Cars List</string>
+
+    <string name="car_list_fragment_label">Cars List</string>
+    <string name="car_map_fragment_label">Cars Map</string>
+
+    <!-- cars_list-->
+    <string name="car_list_snack_bar_action">Ok</string>
+    <string name="network_error">Error has occurred, check internet connection, then pull down to refresh again.</string>
+    <string name="pull_down_to_refresh">Pull down to refresh/fetch Cars.</string>
+
+    <!-- car_item-->
+
+    <string name="car_item_car_maker_group_series_label">%1$s %2$s</string>
+    <string name="car_item_car_maker_group_series_label_default">BMW MINI</string>
+    <string name="car_item_name_label_default">David</string>
+
+
+    <string name="car_item_car_license_plate_label_default">License Plate: License</string>
+    <string name="car_item_car_license_plate_label">License Plate: %1$s</string>
+    <string name="car_item_car_fuel_type_level_trans_label_default">OTHER: T T T</string>
+    <string name="car_item_car_fuel_type_level_trans_label">OTHER: %1$s %2$s %3$s</string>
+
+    <string name="car_item_car_color_label_default">Color: RED_LIGHT</string>
+    <string name="car_item_car_color_label">Color: %1$s</string>
+    <string name="car_item_car_cleanliness_label_default">Cleanliness: VERY_CLEAR</string>
+    <string name="car_item_car_cleanliness_label">Cleanliness: %1$s</string>
+
+
+
+    <!-- cars_list-->
+
+    <!-- Google Map API key -->
+    <string name="google_maps_key" >AIzaSyDPLC39Nya6sB3JuYVnRkTu1UScYo8z_uA</string>
+
+
+
+</resources>

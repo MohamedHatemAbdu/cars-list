@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/carsListFragment"
+        android:icon="@drawable/ic_bottom_navigation_cars_list"
+        android:title="@string/car_list_fragment_label" />
+
+
+    <item
+        android:id="@+id/carsMapFragment"
+        android:icon="@drawable/ic_bottom_navigation_cars_map"
+        android:title="@string/car_map_fragment_label" />
+
+
+
+</menu>

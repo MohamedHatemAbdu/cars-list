@@ -1,0 +1,17 @@
+apply plugin: 'kotlin'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // other
+    implementation commmonDependencies.jetbrainsKotlin
+    implementation commmonDependencies.rxAndroid
+    implementation commmonDependencies.rxJava
+
+    // test
+    testImplementation commmonTestDependencies.junit
+    testImplementation commmonTestDependencies.mockitoKotlin
+    testImplementation commmonTestDependencies.mockitoKotlinInline
+
+
+}

@@ -1,0 +1,68 @@
+ext {
+
+    kotlin =
+            [
+                    kotlin: '1.4.10'
+            ]
+
+    build =
+            [
+                    gradle    : '4.1.0',
+                    buildTools: '29.0.2'
+            ]
+
+    googleServices =
+            [
+                    googleServiceMaps: '17.0.0'
+            ]
+
+
+    jetpack =
+            [
+                    navigationController: '2.1.0',
+
+            ]
+
+    libraries =
+            [
+                    dagger               : '2.29.1',
+                    rxJava               : '3.0.6',
+                    rxAndroid           : '3.0.0',
+                    retrofit2            : '2.9.0',
+                    okhttpLogging        : '4.9.0',
+                    moshi                : '1.11.0',
+                    glide                : "4.11.0",
+                    recyclerviewAnimators: '3.0.0',
+
+            ]
+
+    google =
+            [
+                    material: '1.2.1'
+            ]
+
+    androidX =
+            [
+                    appcompat         : '1.2.0',
+                    constraintLayout  : '2.0.1',
+                    swiperefreshlayout: '1.1.0',
+                    lifeCycleExtensions :'2.1.0',
+
+            ]
+
+    test = [
+            mockitoKotlin :'3.2.0',
+            mockitoInline :'3.11.2',
+            supportTest    : '1.1.0-alpha1',
+            supportTestCore: '1.0.0',
+            espresso       : '3.1.0-alpha1',
+            junit          : '4.12',
+            archTestCore :'2.0.0'
+
+
+    ]
+
+    androidTest = [
+
+    ]
+}

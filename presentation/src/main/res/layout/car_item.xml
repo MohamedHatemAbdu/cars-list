@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.me.domain.carlist.entity.CarEntity" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_8_dp"
+        app:cardCornerRadius="@dimen/cardview_default_radius"
+        app:cardElevation="@dimen/cardview_default_elevation">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/dimen_8_dp"
+            android:background="@color/aqua_haze_color">
+
+            <TextView
+                android:id="@+id/tvCarItemMakerSeries"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_8_dp"
+                android:layout_marginLeft="@dimen/dimen_8_dp"
+                android:text="@{@string/car_item_car_maker_group_series_label(item.make, item.series)}"
+                android:textColor="@color/tango_color"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/ivCarItemPic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/car_item_car_maker_group_series_label_default" />
+
+            <TextView
+                android:id="@+id/tvCarItemName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_16_dp"
+                android:text="@{item.name}"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toStartOf="@id/ivCarItemPic"
+                app:layout_constraintStart_toStartOf="@id/tvCarItemMakerSeries"
+                app:layout_constraintTop_toBottomOf="@id/tvCarItemMakerSeries"
+                tools:text="@string/car_item_name_label_default" />
+
+            <ImageView
+                android:id="@+id/ivCarItemPic"
+                android:layout_width="@dimen/car_item_img_width"
+                android:layout_height="@dimen/car_item_img_height"
+                app:fallbackImg="@{@drawable/ic_car_fallback}"
+                app:imageUrl="@{item.carImageUrl}"
+                tools:src="@drawable/ic_car_fallback"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvCarItemLicensePlate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@{@string/car_item_car_license_plate_label(item.licensePlate)}"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toStartOf="@id/ivCarItemPic"
+                app:layout_constraintStart_toStartOf="@id/tvCarItemMakerSeries"
+                app:layout_constraintTop_toBottomOf="@id/tvCarItemName"
+                tools:text="@string/car_item_car_license_plate_label_default" />
+
+            <TextView
+                android:id="@+id/tvCarItemFuelTypeLevelTrans"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:text="@{@string/car_item_car_fuel_type_level_trans_label(item.fuelType,item.fuelLevel, item.transmission )}"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toStartOf="@id/ivCarItemPic"
+                app:layout_constraintStart_toStartOf="@id/tvCarItemColor"
+                app:layout_constraintTop_toBottomOf="@id/tvCarItemLicensePlate"
+                tools:text="@string/car_item_car_fuel_type_level_trans_label_default" />
+
+            <TextView
+                android:id="@+id/tvCarItemColor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8_dp"
+                android:text="@{@string/car_item_car_color_label(item.color)}"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toStartOf="@id/ivCarItemPic"
+                app:layout_constraintStart_toStartOf="@id/tvCarItemMakerSeries"
+                app:layout_constraintTop_toBottomOf="@id/tvCarItemFuelTypeLevelTrans"
+                tools:text="@string/car_item_car_color_label_default" />
+
+            <TextView
+                android:id="@+id/tvCarItemCleanliness"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_8_dp"
+                android:text="@{@string/car_item_car_cleanliness_label(item.innerCleanliness)}"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toStartOf="@id/ivCarItemPic"
+                app:layout_constraintStart_toStartOf="@id/tvCarItemMakerSeries"
+                app:layout_constraintTop_toBottomOf="@id/tvCarItemColor"
+                tools:text="@string/car_item_car_cleanliness_label_default" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

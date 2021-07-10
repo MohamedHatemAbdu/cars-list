@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/carsListFragment">
+
+    <fragment
+        android:id="@+id/carsListFragment"
+        android:name="com.me.presentation.carlist.view.fragment.CarListFragment"
+        android:label="@string/car_list_fragment_label"
+        tools:layout="@layout/fragment_cars_list" />
+
+    <fragment
+        android:id="@+id/carsMapFragment"
+        android:name="com.me.presentation.carlist.view.fragment.CarMapFragment"
+        android:label="@string/car_map_fragment_label"
+        tools:layout="@layout/fragment_cars_map" />
+
+
+</navigation>

@@ -1,0 +1,107 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
+
+android {
+    compileSdkVersion appBuild.compileSdk
+
+    defaultConfig {
+
+        applicationId "com.me.carslist"
+
+        minSdkVersion appBuild.minSdk
+        targetSdkVersion appBuild.targetSdk
+
+        versionCode appConfig.versionCode
+        versionName appConfig.versionName
+
+        testInstrumentationRunner appBuild.testInstrumentationRunner
+
+        multiDexEnabled true
+
+    }
+    buildTypes {
+
+        debug {
+            minifyEnabled false
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+
+    // other
+    implementation commmonDependencies.jetbrainsKotlin
+    implementation commmonDependencies.jetbrainsKotlinReflections
+    implementation commmonDependencies.rxAndroid
+    implementation commmonDependencies.rxJava
+
+    // android support libs
+    implementation presentationDependencies.material
+    implementation presentationDependencies.appCompat
+
+    //UI
+    implementation presentationDependencies.navigationFragmentKtx
+    implementation presentationDependencies.navigationUIKtx
+    implementation presentationDependencies.constraintLayout
+    implementation presentationDependencies.recyclerviewAnimators
+    implementation presentationDependencies.glide
+    implementation presentationDependencies.androidx_swiperefreshlayout
+
+
+
+
+
+    //dagger
+    kapt presentationDependencies.daggerCompiler
+    kapt presentationDependencies.daggerAndroidProcessor
+    implementation presentationDependencies.daggerAndroidSupport
+    implementation presentationDependencies.dagger
+    implementation presentationDependencies.daggerAndroid
+
+    //lifecycle
+    implementation presentationDependencies.lifeCycleExtensions
+
+
+    //google maps
+    implementation presentationDependencies.googleServiceMaps
+
+
+
+    // test
+    testImplementation commmonTestDependencies.junit
+    testImplementation commmonTestDependencies.mockitoKotlin
+    testImplementation commmonTestDependencies.mockitoKotlinInline
+    testImplementation commmonTestDependencies.archTestCore
+
+
+    implementation project(':data')
+    implementation project(':domain')
+
+}
+repositories {
+    mavenCentral()
+    google()
+}
