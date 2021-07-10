@@ -1,8 +1,7 @@
 Cars-List App
 =
 
-It retrieves car items from [Cars List API](https://cdn.sixt.io/codingtask/cars) and display it to the user.
-It also gives the user the ability to see all the cars on Google Map.  
+It retrieves car items from [Cars List API](https://cdn.sixt.io/codingtask/cars) and display it to the user, also It gives the user the ability to see all the cars on Google Map.  
 
 
 <img src="/screenshot/cars_1.png" width= "250px"/> <img src="/screenshot/cars_2.png" width= "250px"/>
